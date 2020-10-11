@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color ="primary" >
+    <ion-title>
+      Materia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list lines ="full">
+  
+      <ion-item *ngIf="materia">
+       <ion-input required type="text" placeholder ="Nombre materia" [(ngModel)]
+       =materia.nombre_materia> 
+       </ion-input>
+      </ion-item>
+
+     
+   <ion-item *ngIf="materia">
+       <ion-input required type="number" placeholder ="nota primer corte" [(ngModel)]
+       =materia.nota1corte> 
+       </ion-input>
+      </ion-item>
+
+       <ion-item *ngIf="materia">
+       <ion-input required type="number" placeholder ="nota segundo corte" [(ngModel)]
+       =materia.nota2corte> 
+       </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="materia">
+        <ion-input required type="number" placeholder ="nota tercer corte" [(ngModel)]
+        =materia.nota3corte> 
+        </ion-input>
+       </ion-item>
+
+       <ion-item *ngIf="materia">
+        <ion-input required type="number" placeholder ="definitiva" [(ngModel)]
+        =materia.definitiva disabled="true"> 
+        </ion-input>
+       </ion-item>
+      
+  </ion-list>
+
+  <ion-button expand="full" (click)= "saveMateria()">Guardar</ion-button>
+
+
+
+</ion-content>
